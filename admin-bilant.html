@@ -88,13 +88,15 @@
 
                 <p><strong>Pentru:</strong> Bloc 1, Str. Nitu Vasile, Nr. 57, Sector 4, Bucuresti</p>
 
-                <div class="row">
-                    <div class="col">
+                <div class="row text-center">
+                    <div class="col-sm-6">
                         <div id="chart-ar"></div>
+                        <h1 style="font-weight: bold; font-size: 46px;">2.8%</h1>
                     </div>
 
-                    <div class="col">
+                    <div class="col-sm-6">
                         <div id="chart-ac"></div>
+                        <h1 style="font-weight: bold; font-size: 46px;">1.2%</h1>
                     </div>
                 </div>
 
@@ -183,6 +185,34 @@
                     $(document).bind("kendo:skinChange", createChart);
                 </script>
                 </div>
+
+                <div class="divider"></div>
+
+                <form>
+                  <div class="form-row align-items-center">
+                    <div class="col-auto">
+                      <div class="input-group mb-2">
+                        <input type="text" class="form-control" placeholder="De La">
+                        <div class="input-group-append">
+                          <div class="input-group-text"><span class="icon-calendar"></span></div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="col-auto">
+                      <div class="input-group mb-2">
+                        <input type="text" class="form-control" placeholder="Pana La">
+                        <div class="input-group-append">
+                          <div class="input-group-text"><span class="icon-calendar"></span></div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="col-auto">
+                      <button type="submit" class="btn btn-secondary mb-2">Seteaza Perioada</button>
+                    </div>
+                  </div>
+                </form>
 
                 <div class="divider"></div>
 
