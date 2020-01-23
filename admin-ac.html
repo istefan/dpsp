@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>DPS - Consum Apa</title>
+
+<meta name="viewport" content="width=1000, initial-scale=1.0, maximum-scale=1.0">
+
+<!-- Bootstrap -->
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+
+<!-- Google Font -->
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto&display=swap">
+
+<!-- kendo ui -->
+<!-- <link href="css/kendo.common.min.css" rel="stylesheet"> -->
+<link href="css/kendo.material-v2.min.css" rel="stylesheet">
+
+<!-- DPS UI -->
+<link rel="stylesheet" href="style.css">
+
+<!-- jQuery -->
+<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"></script>
+
+<!-- kendo JS -->
+<script src="js/jszip.min.js"></script>
+<script src="js/kendo.all.min.js"></script>
+</head>
+
+<body>
+
+    <header class="site-header">
+        <div class="container">
+            <div class="row">
+                <div class="col">
+                    <div class="dropdown">
+                        <button class="btn btn-invert dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <span class="icon-user"></span>
+                            Administrator Ion
+                        </button>
+                        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                            <a class="dropdown-item" href="contul-meu.html"><span class="icon-home"></span> Contul Meu</a>
+                            <a class="dropdown-item" href="bransamentele-mele.html"><span class="icon-office"></span> Bransamentele Mele</a>
+                            <a class="dropdown-item" href="#"><span class="icon-upload2"></span> Iesire din cont</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="header-logo">
+                        <a href="#">
+                            <img src="images/logo-portal.png">
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <div class="site-container">
+        <div class="content">
+            <header class="wrap page-menu">
+                <div class="row">
+                    <div class="col">
+                        <a href="admin-ac.html" class="active">
+                            <span class="icon-water"></span>
+                        </a>
+                    </div>
+                    <div class="col">
+                        <a href="admin-et.html">
+                            <span class="icon-radiator"></span>
+                        </a>
+                    </div>
+                    <div class="col">
+                        <a href="admin-bilant.html">
+                            <span class="icon-pie"></span>
+                        </a>
+                    </div>  
+                </div>         
+            </header><!-- .entry-header -->
+
+            <div class="entry-content">
+                <div class="chart-row">
+
+                <h2>
+                    Consum Apa - Decembrie 2019
+                    <a href="apartamentele-mele.html" class="btn btn-outline-secondary header-btn btn-sm">Modifica Adresa</a>
+                </h2>
+
+                <p><strong>Pentru:</strong> Bloc 1, Str. Nitu Vasile, Nr. 57, Sector 4, Bucuresti</p>
+                <p>
+                    <span class="icon-arrow-up c-mai-mare"></span>
+                    Consum apa calda: 94 m3
+                    <br>
+                    <span class="icon-arrow-down c-mai-mic"></span>
+                    Consum apa rece: 83 m3
+                </p>
+
+                <div class="demo-section k-content wide">
+                    <div id="chart"></div>
+                </div>
+                <script>
+                    function createChart() {
+                        $("#chart").kendoChart({
+                            title: {
+                                text: "Consum lunar apa calda si rece"
+                            },
+                            legend: {
+                                position: "top"
+                            },
+                            seriesDefaults: {
+                                type: "column"
+                            },
+                            series: [{
+                                name: "Apa Calda",
+                                data: [3.907, 7.943, 7.848, 9.284, 9.263, 9.801],
+                                color: "#eb4d4b",
+                                border: { width: 0 }
+                            }, {
+                                name: "Apa Rece",
+                                data: [4.743, 7.295, 7.175, 6.376, 8.153, 8.535],
+                                color: "#3498db",
+                                border: { width: 0 }
+                            }],
+                            valueAxis: {
+                                labels: {
+                                    format: "{0}"
+                                },
+                                line: {
+                                    visible: false
+                                },
+                                axisCrossingValue: 0
+                            },
+                            categoryAxis: {
+                                categories: ['2019-07', '2019-08', '2019-09', '2019-10', '2019-11', '2019-12'],
+                                line: {
+                                    visible: false
+                                },
+                                labels: {
+                                    padding: {top: 0}
+                                }
+                            },
+                            tooltip: {
+                                visible: true,
+                                format: "{0}",
+                                template: "#= series.name #: #= value #"
+                            }
+                        });
+                    }
+
+                    $(document).ready( createChart );
+                    $(document).bind( "kendo:skinChange", createChart );
+                </script>
+
+                <p>Aici slider / butoane de adaugare / scoatere luni din chart.</p>
+
+                </div>
+
+                <div class="divider"></div>
+
+                <h4>Arhiva Repartizari Costuri:</h4>
+
+                <div class="faq-container">
+                    <a href="dummy.pdf" target="_blank">
+                        <span class="icon-pdf"></span>
+                        Centralizator consum pentru luna 12-2019
+                    </a>
+                </div>
+               <div class="faq-container">
+                    <a href="dummy.pdf" target="_blank">
+                        <span class="icon-pdf"></span>
+                        Centralizator consum pentru luna 11-2019
+                    </a>
+                </div>
+               <div class="faq-container">
+                    <a href="dummy.pdf" target="_blank">
+                        <span class="icon-pdf"></span>
+                        Centralizator consum pentru luna 10-2019
+                    </a>
+                </div>
+               <div class="faq-container">
+                    <a href="dummy.pdf" target="_blank">
+                        <span class="icon-pdf"></span>
+                        Centralizator consum pentru luna 09-2019
+                    </a>
+                </div>
+               <div class="faq-container">
+                    <a href="dummy.pdf" target="_blank">
+                        <span class="icon-pdf"></span>
+                        Centralizator consum pentru luna 08-2019
+                    </a>
+                </div>
+               <div class="faq-container">
+                    <a href="dummy.pdf" target="_blank">
+                        <span class="icon-pdf"></span>
+                        Centralizator consum pentru luna 07-2019
+                    </a>
+                </div>
+                <p>Alte luni, eventual pana la 12, ca arhiva pdf...</p>
+
+            </div>
+
+        </div> <!-- /site-content -->
+
+        <div class="sidebar">
+            <ul>
+                <li>
+                    <a href="index.html" class="active">
+                        <span class="icon-dashboard"></span><br>
+                        Panoul Meu
+                    </a>
+                </li>
+                <li>
+                    <a href="admin-ac.html">
+                        <span class="icon-chart"></span><br>
+                        Consumul Meu
+                    </a>
+                </li>
+                <li>
+                    <a href="info.html">
+                        <span class="icon-info"></span><br>
+                        Info Center
+                    </a>
+                </li>
+                <li>
+                    <a href="contact.html">
+                        <span class="icon-email"></span><br>
+                        Contact
+                    </a>
+                </li>
+            </ul>
+        </div> <!-- /sidebar -->    </div> <!-- /site-container -->
+
+<footer>
+<p>Copyright - DPS</p>
+</footer>
+
+<!-- JS -->
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+
+</body>
+</html>

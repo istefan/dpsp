@@ -1,0 +1,665 @@
+/* Demo
+--------------------------------------------- */
+.demo-headline {
+  text-align: center;
+  padding: 30px 0;
+}
+
+h3.demo-panel-title {
+  color: #e67e22;
+}
+
+.logo img {
+  width: 80px;
+  margin-bottom: 20px;
+}
+
+.pallete-item {
+    padding: 15px;
+    color: #fff;
+    margin-bottom: 10px;
+}
+
+.glyph {
+    font-size: 36px;
+    line-height: 1;
+    float: left;
+    width: 200px;
+    padding: 10px;
+    border: 1px solid #eee;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    color: #428bca;
+
+    &:hover {
+        color: #e67e22;
+    }
+
+    span.mls {
+        font-size: 16px;
+        line-height: 48px;
+        color: #111;
+    }
+    
+}
+
+.demo-img {
+    img {
+        width: 100px;
+        float: left;
+        margin-right: 24px;
+        margin-bottom: 24px;
+    }
+}
+
+.demo-section {
+    width: 100%;
+}
+
+footer {
+    text-align: center;
+    color: #fff;
+    font-size: 14px;
+    padding: 20px 0;
+}
+
+/* Body Fade In Effect
+--------------------------------------------- */
+
+body {
+  -webkit-animation: fadein 0.5s;
+  -moz-animation: fadein 0.5s;
+  -ms-animation: fadein 0.5s;
+  -o-animation: fadein 0.5s;
+  animation: fadein 0.5s;
+}
+
+@keyframes fadein {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@-moz-keyframes fadein {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@-webkit-keyframes fadein {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@-ms-keyframes fadein {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@-o-keyframes fadein {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* Divider
+--------------------------------------------- */
+
+.divider {
+  border-bottom: 1px solid #ddd;
+  clear: both;
+  width: 70%;
+  margin: auto;
+  margin-bottom: 50px;
+  padding-top: 30px;
+  position: relative;
+}
+
+.divider .divider-inside {
+  width: 8px;
+  height: 8px;
+  position: absolute;
+  left: 50%;
+  border: 2px solid #ddd;
+  background-color: #fff;
+  margin-left: -4px;
+  margin-top: -4px;
+  border-radius: 4px;
+}
+
+/* Structure
+--------------------------------------------- */
+
+.site-header {
+    padding:  20px 0;
+
+    color: #fff;
+
+    .dropdown-toggle {
+        color: #fff;
+        text-shadow: 0 0 1px rgba(0, 0, 0, 0.6);
+    }
+}
+
+.header-logo {
+    float: right;
+    padding-right: 10px;
+
+    img {
+        width: 150px;
+    }
+}
+
+.site-container {
+    background-color: #fff;
+    margin: 0 auto;
+    max-width: 96%;
+    overflow: hidden;
+    padding: 0;
+}
+
+.page-header {
+    background-color: #428bca;
+    color: #fff;
+    padding: 20px;
+}
+
+.page-menu {
+    text-align: center;
+    background-color: #428bca;
+
+    a,
+    a:hover {
+        color: #fff;
+        font-size: 48px;
+        background-color: #428bca;
+        display: block;
+        padding: 10px 0;
+
+        &.active {
+            background-color: #fff;
+            color: #428bca;
+        }
+    }
+}
+
+.entry-content {
+    padding: 30px;
+}
+
+.dashboard-icons {
+    text-align: center;
+
+    img {
+        width: 200px;
+    }
+
+    h4 {
+        margin-bottom: 5px;
+        padding: 0;
+    }
+
+    small {
+        display: block;
+        margin-bottom: 24px;
+    }
+}
+
+.sidebar {
+
+    ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+
+        li {
+            text-align: center;
+
+
+            a {
+                text-decoration: none;
+                display: block;
+                border-bottom: 2px solid #fff;
+                padding: 20px 0;
+                color: #95a5a6;
+                font-size: 14px;
+                font-weight: bold;
+
+                &:hover,
+                &.active {
+                    color: #428bca;
+                }
+
+                &.active {
+                    background-color: #fff;
+                    border-bottom: 2px solid #428bca;
+                }
+
+                span {
+                    font-size: 48px;
+                }
+            }
+        }
+    }
+}
+
+@media (min-width: 768px) {
+    .site-container {
+        width: 750px;
+    }
+}
+@media (min-width: 992px) {
+    .site-container {
+        width: 970px;
+        background: #fff url(images/content-bg.png) left repeat-y;
+    }
+
+    .content {
+        width: 770px;
+        float: right;
+    }
+
+    .sidebar {
+        width: 200px;
+        float: left;
+    }
+}
+@media (min-width: 1200px) {
+    .site-container {
+        width: 1100px;
+    }
+
+    .content {
+        width: 900px; 
+    }
+}
+
+.faq-container {
+    border: 1px solid #ddd;
+    padding: 20px;
+    margin-bottom: 24px;
+    border-radius: 5px;
+    line-height: 1;
+
+    span {
+        font-weight: bold;
+        margin-right: 10px;
+    }
+
+    .icon-pdf {
+        font-size: 24px;
+    }
+
+}
+
+/* Buttons
+--------------------------------------------- */
+
+.btn,
+.btn-default {
+  font-size: 16px;
+}
+
+.btn-default,
+.btn-primary {
+  background-color: #428bca;
+  color: #fff;
+
+  &:hover {
+    color: #fff;
+    background-color: #357ab5;
+  }
+}
+
+
+.header-btn {
+    float: right;
+}
+
+/* Typography
+--------------------------------------------- */
+
+body {
+    color: #666666;
+    font-family: "Roboto", Helvetica, Arial, sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 30px;
+    background-color: #ACD4EA;
+    border-top: 12px solid #428bca;
+}
+
+a {
+  color: #428bca;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #111111;
+  text-decoration: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Roboto", Helvetica, Arial, sans-serif;
+  color: #111111;
+  font-weight: 500;
+  line-height: 1.2;
+  margin: 0 0 24px;
+}
+
+h1 {
+  font-size: 32px;
+}
+
+h2 {
+  font-size: 28px;
+}
+
+h3 {
+  font-size: 24px;
+}
+
+h4 {
+  font-size: 22px;
+}
+
+h5 {
+  font-size: 19px;
+}
+
+h6 {
+  font-size: 15px;
+}
+
+.c-mai-mare {
+    color: #e67e22;
+}
+
+.c-mai-mic {
+    color: #2ecc71;
+}
+
+.c-egal {
+    color: #3498db;
+}
+
+/* Font
+--------------------------------------------- */
+
+@font-face {
+  font-family: 'icomoon';
+  src:  url('fonts/icomoon.eot?p48olb');
+  src:  url('fonts/icomoon.eot?p48olb#iefix') format('embedded-opentype'),
+    url('fonts/icomoon.ttf?p48olb') format('truetype'),
+    url('fonts/icomoon.woff?p48olb') format('woff'),
+    url('fonts/icomoon.svg?p48olb#icomoon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'icomoon' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  margin: 0;
+  padding: 0;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-arrow-up:before {
+  content: "\e909";
+}
+.icon-arrow-left:before {
+  content: "\e90a";
+}
+.icon-arrow-down:before {
+  content: "\e90b";
+}
+.icon-arrow-right:before {
+  content: "\e90c";
+}
+.icon-gear:before {
+  content: "\e90d";
+}
+.icon-document:before {
+  content: "\e90e";
+}
+.icon-pdf:before {
+  content: "\e90f";
+}
+.icon-responsive:before {
+  content: "\e910";
+}
+.icon-mobile:before {
+  content: "\e911";
+}
+.icon-phone:before {
+  content: "\e912";
+}
+.icon-contact:before {
+  content: "\e913";
+}
+.icon-email:before {
+  content: "\e914";
+}
+.icon-user:before {
+  content: "\e915";
+}
+.icon-water1:before {
+  content: "\e916";
+}
+.icon-pie:before {
+  content: "\e917";
+}
+.icon-chart:before {
+  content: "\e918";
+}
+.icon-info:before {
+  content: "\e919";
+}
+.icon-help:before {
+  content: "\e91a";
+}
+.icon-dashboard:before {
+  content: "\e91b";
+}
+.icon-water:before {
+  content: "\e91c";
+}
+.icon-radiator:before {
+  content: "\e91d";
+}
+.icon-home:before {
+  content: "\e91e";
+}
+.icon-office:before {
+  content: "\e91f";
+}
+.icon-podcast:before {
+  content: "\e920";
+}
+.icon-feed:before {
+  content: "\e921";
+}
+.icon-file-zip:before {
+  content: "\e92b";
+}
+.icon-copy:before {
+  content: "\e92c";
+}
+.icon-paste:before {
+  content: "\e92d";
+}
+.icon-stack:before {
+  content: "\e92e";
+}
+.icon-lifebuoy:before {
+  content: "\e941";
+}
+.icon-pushpin:before {
+  content: "\e946";
+}
+.icon-location2:before {
+  content: "\e948";
+}
+.icon-calendar:before {
+  content: "\e953";
+}
+.icon-printer:before {
+  content: "\e954";
+}
+.icon-bubbles4:before {
+  content: "\e970";
+}
+.icon-equalizer:before {
+  content: "\e992";
+}
+.icon-equalizer2:before {
+  content: "\e993";
+}
+.icon-pie-chart:before {
+  content: "\e99a";
+}
+.icon-stats-dots:before {
+  content: "\e99b";
+}
+.icon-stats-bars:before {
+  content: "\e99c";
+}
+.icon-stats-bars2:before {
+  content: "\e99d";
+}
+.icon-fire:before {
+  content: "\e9a9";
+}
+.icon-lab:before {
+  content: "\e9aa";
+}
+.icon-clipboard:before {
+  content: "\e9b8";
+}
+.icon-cloud-check:before {
+  content: "\e9c4";
+}
+.icon-download2:before {
+  content: "\e9c5";
+}
+.icon-upload2:before {
+  content: "\e9c6";
+}
+.icon-earth:before {
+  content: "\e9ca";
+}
+.icon-link:before {
+  content: "\e9cb";
+}
+.icon-plus:before {
+  content: "\ea0a";
+}
+.icon-minus:before {
+  content: "\ea0b";
+}
+.icon-cross:before {
+  content: "\ea0f";
+}
+.icon-checkmark:before {
+  content: "\ea10";
+}
+.icon-checkmark2:before {
+  content: "\ea11";
+}
+.icon-arrow-up1:before {
+  content: "\ea32";
+}
+.icon-arrow-right1:before {
+  content: "\ea34";
+}
+.icon-arrow-down1:before {
+  content: "\ea36";
+}
+.icon-arrow-left1:before {
+  content: "\ea38";
+}
+.icon-circle-up:before {
+  content: "\ea41";
+}
+.icon-circle-right:before {
+  content: "\ea42";
+}
+.icon-circle-down:before {
+  content: "\ea43";
+}
+.icon-circle-left:before {
+  content: "\ea44";
+}
+.icon-facebook2:before {
+  content: "\ea91";
+}
+.icon-twitter:before {
+  content: "\ea96";
+}
+.icon-rss:before {
+  content: "\ea9b";
+}
+.icon-github:before {
+  content: "\eab0";
+}
+.icon-tumblr2:before {
+  content: "\eaba";
+}
+.icon-appleinc:before {
+  content: "\eabe";
+}
+.icon-android:before {
+  content: "\eac0";
+}
+.icon-windows8:before {
+  content: "\eac2";
+}
+.icon-skype:before {
+  content: "\eac5";
+}
+.icon-file-pdf:before {
+  content: "\eadf";
+}
+.icon-file-openoffice:before {
+  content: "\eae0";
+}
+.icon-file-word:before {
+  content: "\eae1";
+}
+.icon-file-excel:before {
+  content: "\eae2";
+}
+.icon-libreoffice:before {
+  content: "\eae3";
+}
+

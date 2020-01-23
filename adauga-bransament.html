@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>DPS - Consum Apa</title>
+
+<meta name="viewport" content="width=1000, initial-scale=1.0, maximum-scale=1.0">
+
+<!-- Bootstrap -->
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+
+<!-- Google Font -->
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto&display=swap">
+
+<!-- kendo ui -->
+<!-- <link href="css/kendo.common.min.css" rel="stylesheet"> -->
+<link href="css/kendo.material-v2.min.css" rel="stylesheet">
+
+<!-- DPS UI -->
+<link rel="stylesheet" href="style.css">
+
+<!-- jQuery -->
+<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"></script>
+
+<!-- kendo JS -->
+<script src="js/jszip.min.js"></script>
+<script src="js/kendo.all.min.js"></script>
+</head>
+
+<body>
+
+    <header class="site-header">
+        <div class="container">
+            <div class="row">
+                <div class="col">
+                    <div class="dropdown">
+                        <button class="btn btn-invert dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <span class="icon-user"></span>
+                            Administrator Ion
+                        </button>
+                        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                            <a class="dropdown-item" href="contul-meu.html"><span class="icon-home"></span> Contul Meu</a>
+                            <a class="dropdown-item" href="bransamentele-mele.html"><span class="icon-office"></span> Bransamentele Mele</a>
+                            <a class="dropdown-item" href="#"><span class="icon-upload2"></span> Iesire din cont</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="header-logo">
+                        <a href="#">
+                            <img src="images/logo-portal.png">
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <div class="site-container">
+        <div class="content">
+            <header class="wrap page-menu">
+                <div class="row">
+                    <div class="col">
+                        <a href="admin-ac.html">
+                            <span class="icon-water"></span>
+                        </a>
+                    </div>
+                    <div class="col">
+                        <a href="admin-et.html">
+                            <span class="icon-radiator"></span>
+                        </a>
+                    </div>
+                    <div class="col">
+                        <a href="admin-bilant.html">
+                            <span class="icon-pie"></span>
+                        </a>
+                    </div>  
+                </div>         
+            </header><!-- .entry-header -->
+
+            <div class="entry-content">
+
+                <h2>Adauga Bransament</h2>
+                <p>Rugam adaugati datele asa cum apar pe notele de consum.</p>
+
+                <form>
+                  <div class="form-group row">
+                    <label class="col-sm-3 col-form-label">Cod Client</label>
+                    <div class="col-sm-5">
+                      <input type="text" class="form-control">
+                    </div>
+                  </div>
+                  <div class="form-group row">
+                    <label class="col-sm-3 col-form-label">Strada</label>
+                    <div class="col-sm-5">
+                      <input type="text" class="form-control">
+                    </div>
+                  </div>
+                  <div class="form-group row">
+                    <label class="col-sm-3 col-form-label">Numar</label>
+                    <div class="col-sm-5">
+                      <input type="text" class="form-control">
+                    </div>
+                  </div>
+                  <div class="form-group row">
+                    <label class="col-sm-3 col-form-label">Bloc</label>
+                    <div class="col-sm-5">
+                      <input type="text" class="form-control">
+                    </div>
+                  </div>
+                  <div class="form-group row">
+                    <label class="col-sm-3 col-form-label">Scara</label>
+                    <div class="col-sm-5">
+                      <input type="text" class="form-control">
+                    </div>
+                  </div>
+                  <div class="form-group row">
+                    <label class="col-sm-3 col-form-label">Sector</label>
+                    <div class="col-sm-5">
+                      <select class="form-control form-control-lg">
+                        <option>Alege Sector</option>
+                        <option>Sector 1</option>
+                        <option>Sector 2</option>
+                        <option>Sector 3</option>
+                        <option>Sector 4</option>
+                        <option>Sector 5</option>
+                        <option>Sector 6</option>
+                      </select>
+                    </div>
+                  </div>
+                  <div class="form-group row">
+                    <label class="col-sm-3 col-form-label">Localitate</label>
+                    <div class="col-sm-5">
+                      <input type="text" class="form-control">
+                    </div>
+                  </div>
+                  <div class="form-group row">
+                    <label class="col-sm-3 col-form-label">Judet</label>
+                    <div class="col-sm-5">
+                      <input type="text" class="form-control">
+                    </div>
+                  </div>
+                  <p><button type="submit" class="btn btn-primary">Adauga Bransament</button></p>
+                </form>
+
+            </div>
+
+        </div> <!-- /site-content -->
+
+        <div class="sidebar">
+            <ul>
+                <li>
+                    <a href="index.html" class="active">
+                        <span class="icon-dashboard"></span><br>
+                        Panoul Meu
+                    </a>
+                </li>
+                <li>
+                    <a href="admin-ac.html">
+                        <span class="icon-chart"></span><br>
+                        Consumul Meu
+                    </a>
+                </li>
+                <li>
+                    <a href="info.html">
+                        <span class="icon-info"></span><br>
+                        Info Center
+                    </a>
+                </li>
+                <li>
+                    <a href="contact.html">
+                        <span class="icon-email"></span><br>
+                        Contact
+                    </a>
+                </li>
+            </ul>
+        </div> <!-- /sidebar -->    </div> <!-- /site-container -->
+
+<footer>
+<p>Copyright - DPS</p>
+</footer>
+
+<!-- JS -->
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+
+</body>
+</html>
