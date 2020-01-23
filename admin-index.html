@@ -80,18 +80,14 @@
 
             <div class="entry-content">
 
-                <div class="alert alert-warning" role="alert">
-                  Pentru ce tip de informatii se vor transmite de aici, va trebui sa cadem de comun acord cu Vlad.
-                </div>
-
-                <h2>Transmitere Index Contor Bransament</h2>
-                <p>Transmiteti valoare facturii de bransament.</p>
+                <h2>Transmitere Factura Furnizor</h2>
+                <p>Aici puteti incarca facturile de la furnizor pentru a fi utilizate la distributia costurilor individuale.</p>
 
                 <form>
                   <div class="form-group row">
                     <label class="col-sm-3 col-form-label">Locatie</label>
                     <div class="col-sm-5">
-                    <select class="form-control form-control-lg">
+                    <select class="custom-select my-1 mr-sm-2">
                       <option>Denumire bransament curent</option>
                       <option>Denumire bransament 2</option>
                       <option>Denumire bransament 3</option>
@@ -101,14 +97,19 @@
                   <div class="form-group row">
                     <label class="col-sm-3 col-form-label">Luna</label>
                     <div class="col-sm-5">
-                      <input type="text" class="form-control" id="monthpicker" value="January 2020" title="monthpicker">
+                      <div class="input-group mb-2">
+                        <input type="text" class="form-control" placeholder="Datepicker">
+                        <div class="input-group-append">
+                          <div class="input-group-text"><span class="icon-calendar"></span></div>
+                        </div>
+                      </div>
                     </div>
                   </div>
                   <div class="form-group row">
-                    <label class="col-sm-3 col-form-label">Tip Factura</label>
+                    <label class="col-sm-3 col-form-label">Furnizor</label>
                     <div class="col-sm-5">
-                    <select class="form-control form-control-lg">
-                      <option>Alegeti tipul facturii</option>
+                    <select class="custom-select my-1 mr-sm-2">
+                      <option>Alegeti furnizorul</option>
                       <option>Apa Rece</option>
                       <option>Apa Calda</option>
                       <option>Energie Termica</option>
@@ -116,33 +117,16 @@
                     </div>
                   </div>
                   <div class="form-group row">
-                    <label class="col-sm-3 col-form-label">Valoare</label>
+                    <label class="col-sm-3 col-form-label">Factura</label>
                     <div class="col-sm-5">
-                      <input type="text" class="form-control">
+                    <div class="custom-file">
+                      <input type="file" class="custom-file-input" id="customFile" lang="ro">
+                      <label class="custom-file-label" for="customFile" data-browse="Incarca">Alege Fisier</label>
+                    </div>
                     </div>
                   </div>
-                  <p><button type="submit" class="btn btn-primary">Trimite Valoare Factura</button></p>
+                  <p><button type="submit" class="btn btn-primary">Trimite Factura</button></p>
                 </form>
-
-                <script>
-                    $(document).ready(function() {
-                        // create DatePicker from input HTML element
-
-                        $("#monthpicker").kendoDatePicker({
-                            // defines the start view
-                            start: "year",
-
-                            // defines when the calendar should return date
-                            depth: "year",
-
-                            // display month and year in the input
-                            format: "MMMM yyyy",
-
-                            // specifies that DateInput is used for masking the input element
-                            dateInput: true
-                        });
-                    });
-                </script>
 
             </div>
 
