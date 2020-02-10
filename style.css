@@ -164,8 +164,14 @@ body {
   background-color: #428bca;
   color: #fff;
   padding: 20px;
+  text-align: center;
 }
 
+@media (min-width: 768px) {
+  .page-header {
+    text-align: left;
+  }
+}
 .page-menu {
   text-align: center;
   background-color: #428bca;
@@ -203,6 +209,9 @@ body {
   margin-bottom: 24px;
 }
 
+.sidebar {
+  display: none;
+}
 .sidebar ul {
   list-style-type: none;
   margin: 0;
@@ -250,6 +259,7 @@ body {
   .sidebar {
     width: 200px;
     float: left;
+    display: block;
   }
 }
 @media (min-width: 1200px) {
@@ -276,6 +286,15 @@ body {
   font-size: 24px;
 }
 
+.chart-row h2 {
+  text-align: center;
+}
+
+@media (min-width: 768px) {
+  .chart-row h2 {
+    text-align: left;
+  }
+}
 /* Buttons
 --------------------------------------------- */
 .btn,
@@ -295,9 +314,17 @@ body {
 }
 
 .header-btn {
-  float: right;
+  display: block;
+  margin-top: 20px;
 }
 
+@media (min-width: 768px) {
+  .header-btn {
+    float: right;
+    display: inline-block;
+    margin-top: 0;
+  }
+}
 /* Typography
 --------------------------------------------- */
 body {
@@ -697,4 +724,117 @@ h6 {
 
 .icon-libreoffice:before {
   content: "\eae3";
+}
+
+ /* Mobile navigation
+--------------------------------------------- */
+.mobile-navigation {
+  height: 100%;
+  width: 0;
+  /* 0px */
+  background: #428bca;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  overflow: auto;
+  box-shadow: 3px 0 7px rgba(0, 0, 0, 0.55);
+  line-height: 50px;
+  z-index: 99999;
+  -webkit-transition: all 0.1s ease;
+  -moz-transition: all 0.1s ease;
+  -ms-transition: all 0.1s ease;
+  -o-transition: all 0.1s ease;
+  transition: all 0.1s ease;
+}
+
+.mobile-navigation.open {
+  width: 250px;
+}
+
+.mobile-navigation ul {
+  z-index: 2;
+  overflow-y: auto;
+  overflow-x: hidden;
+  margin: 0;
+  padding: 0;
+}
+
+.mobile-navigation ul li {
+  display: block;
+  margin: 0;
+  padding: 0;
+}
+
+.mobile-navigation ul li a {
+  display: block;
+  padding: 0 20px;
+  color: #ddd;
+  font-size: 16px;
+  font-weight: 300;
+  text-decoration: none;
+  border-bottom: 1px solid #357ab5;
+  text-shadow: 0 1px 1px rgba(0, 0, 0, 0.8);
+  font-size: 15px;
+  font-weight: normal;
+}
+
+.mobile-navigation ul li a:hover {
+  color: #fff;
+  background: #357ab5;
+}
+
+.mobile-navigation .mobile-menu-close {
+  display: block;
+  text-align: right;
+  cursor: pointer;
+  color: #fff;
+  line-height: 50px;
+  font-size: 20px;
+  border-bottom: 1px solid #357ab5;
+  padding-right: 10px;
+}
+
+.mobile-menu-overlay {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 99998;
+  background-color: rgba(0, 0, 0, 0.6);
+  display: none;
+}
+
+.mobile-menu-overlay.open {
+  display: block;
+}
+
+.menu-toggle {
+  display: block;
+  text-align: left;
+  line-height: 60px;
+  text-transform: uppercase;
+}
+
+.menu-toggle a {
+  color: #FFF;
+}
+
+.menu-toggle a:hover {
+  color: #428bca;
+}
+
+.top-menu {
+  display: none;
+}
+
+@media (min-width: 992px) {
+  .menu-toggle {
+    display: none;
+  }
+
+  .top-menu {
+    display: block;
+  }
 }

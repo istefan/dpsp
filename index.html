@@ -33,7 +33,9 @@
         <div class="container">
             <div class="row">
                 <div class="col">
-                    <div class="dropdown">
+                    <span class="menu-toggle"><a href="#">MENIU</a></span>
+
+                    <div class="dropdown top-menu">
                         <button class="btn btn-invert dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                             <span class="icon-user"></span>
                             Administrator Ion
@@ -204,8 +206,66 @@
         </div> <!-- /sidebar -->    </div> <!-- /site-container -->
 
 <footer>
-<p>Copyright - DPS</p>
+<p>&copy; 2020 Decor Press Servicii SRL</p>
 </footer>
+
+<nav class="mobile-navigation">
+    <ul class="mobile-nav">
+        <li class="menu-item">
+            <span class="icon-cross mobile-menu-close"></span>
+        </li>   
+        <li class="menu-item">
+            <a href="index.html">
+                <span class="icon-dashboard"></span> Panoul Meu
+            </a>
+        </li>
+        <li class="menu-item">
+            <a href="admin-ac.html">
+                <span class="icon-chart"></span> Consumul Meu
+            </a>
+        </li>
+        <li class="menu-item">
+            <a href="info.html">
+                <span class="icon-info"></span> Info Center
+            </a>
+        </li>
+        <li class="menu-item">
+            <a href="contact.html">
+                <span class="icon-email"></span> Contact
+            </a>
+        </li>
+        <li class="menu-item">
+            <a href="contul-meu.html">
+                <span class="icon-home"></span> Contul Meu
+            </a>
+        </li>
+        <li class="menu-item">
+            <a href="bransamentele-mele.html">
+                <span class="icon-office"></span> Bransamentele Mele
+            </a>
+        </li>
+        <li class="menu-item">
+            <a href="#">
+                <span class="icon-upload2"></span> Iesire din cont
+            </a>
+        </li>
+    </ul>
+</nav><!-- #mobile-navigation -->
+<span class="mobile-menu-overlay"></span>
+<script>
+    // Mobile menu toggle
+    $( '.menu-toggle a' ).on( 'click', function() {
+        $( '.mobile-navigation' ).toggleClass( 'open' );
+        $( '.mobile-menu-overlay' ).toggleClass( 'open' );
+        return false;
+    });
+    // Mobile menu close
+    $( '.mobile-menu-close, .mobile-menu-overlay' ).on( 'click', function() {
+        $( '.mobile-navigation' ).removeClass( 'open' );
+        $( '.mobile-menu-overlay' ).removeClass( 'open' );
+        return false;
+    });
+</script>
 
 <!-- JS -->
 <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
